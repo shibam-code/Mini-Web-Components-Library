@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Web Components Library</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>MiniComponents</h2>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#components" class="nav-link">Components</a>
+          <a href="#code" class="nav-link">Code</a>
+          <a href="#docs" class="nav-link">Docs</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">Mini Web Components Library</h1>
+          <p class="hero-description">
+            Beautiful, reusable web components with modern design and smooth
+            animations. Build faster with our collection of ready-to-use UI
+            elements.
+          </p>
+          <div class="hero-buttons">
+            <a href="#components" class="btn btn-primary">Explore Components</a>
+            <a href="#code" class="btn btn-secondary">View Code</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="floating-card">
+            <div class="card-preview">
+              <div class="preview-header">
+                <div class="preview-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="preview-title">Component Preview</div>
+              </div>
+              <div class="preview-content">
+                <div class="preview-component">
+                  <div class="mini-button primary-mini">Button</div>
+                  <div class="mini-card">
+                    <div class="mini-card-header"></div>
+                    <div class="mini-card-body">
+                      <div class="mini-line"></div>
+                      <div class="mini-line short"></div>
+                    </div>
+                  </div>
+                  <div class="mini-form">
+                    <div class="mini-input"></div>
+                    <div class="mini-input"></div>
+                    <div class="mini-button secondary-mini">Submit</div>
+                  </div>
+                </div>
+                <div class="preview-code">
+                  <div class="code-line">
+                    <span class="code-tag">&lt;button</span>
+                    <span class="code-attr">class=</span>
+                    <span class="code-value">"btn"</span>
+                    <span class="code-tag">&gt;</span>
+                  </div>
+                  <div class="code-line">
+                    <span class="code-content"> Click Me</span>
+                  </div>
+                  <div class="code-line">
+                    <span class="code-tag">&lt;/button&gt;</span>
+                  </div>
+                </div>
+              </div>
+              <div class="floating-elements">
+                <div class="floating-icon" style="top: 10%; left: 85%">
+                  <i class="fas fa-code"></i>
+                </div>
+                <div class="floating-icon" style="top: 70%; left: 90%">
+                  <i class="fas fa-palette"></i>
+                </div>
+                <div class="floating-icon" style="top: 85%; left: 10%">
+                  <i class="fas fa-magic"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Components Section -->
+    <section id="components" class="components-section">
+      <div class="container">
+        <h2 class="section-title">Reusable Components</h2>
+        <p class="section-description">
+          Interactive components ready for your projects
+        </p>
+
+        <div class="component-explorer">
+          <div class="component-tabs">
+            <button class="component-tab-btn active" data-component="button">
+              <i class="fas fa-mouse-pointer"></i>
+              <span>Buttons</span>
+            </button>
+            <button class="component-tab-btn" data-component="card">
+              <i class="fas fa-id-card"></i>
+              <span>Cards</span>
+            </button>
+            <button class="component-tab-btn" data-component="form">
+              <i class="fas fa-edit"></i>
+              <span>Forms</span>
+            </button>
+          </div>
+          <div class="component-display">
+            <!-- Button Display -->
+            <div class="component-display-item active" id="component-button">
+              <div class="component-demo">
+                <div class="demo-buttons-container">
+                  <button class="demo-btn primary">
+                    <span>Primary</span>
+                    <div class="btn-ripple"></div>
+                  </button>
+                  <button class="demo-btn secondary">
+                    <span>Secondary</span>
+                    <div class="btn-ripple"></div>
+                  </button>
+                  <button class="demo-btn outline">
+                    <span>Outline</span>
+                    <div class="btn-ripple"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Card Display -->
+            <div class="component-display-item" id="component-card">
+              <div class="component-demo">
+                <div class="demo-card">
+                  <div class="card-image">
+                    <div class="placeholder-image">
+                      <i class="fas fa-image"></i>
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h4>Card Title</h4>
+                    <p>
+                      This is a sample card component with image and text
+                      content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Form Display -->
+            <div class="component-display-item" id="component-form">
+              <div class="component-demo">
+                <div class="demo-form-container">
+                  <form class="demo-form">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-input"
+                        placeholder=" "
+                        required
+                      />
+                      <label class="form-label">Full Name</label>
+                      <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        class="form-input"
+                        placeholder=" "
+                        required
+                      />
+                      <label class="form-label">Email Address</label>
+                      <div class="form-line"></div>
+                    </div>
+                    <button type="submit" class="form-submit">
+                      <span>Submit Form</span>
+                      <i class="fas fa-arrow-right"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Code Section -->
+    <section id="code" class="code-section">
+      <div class="container">
+        <h2 class="section-title">Code Examples</h2>
+        <p class="section-description">
+          Copy and paste these components into your projects
+        </p>
+
+        <div class="code-tabs">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="button-code">
+              Button
+            </button>
+            <button class="tab-btn" data-tab="card-code">Card</button>
+            <button class="tab-btn" data-tab="form-code">Form</button>
+          </div>
+
+          <!-- Button Code -->
+          <div class="tab-content active" id="button-code">
+            <div class="code-block">
+              <div class="code-header">
+                <span>HTML</span>
+                <button class="copy-btn" data-copy="button-html">Copy</button>
+              </div>
+              <pre><code>&lt;button class="demo-btn primary"&gt;
+    &lt;span&gt;Primary&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class="demo-btn secondary"&gt;
+    &lt;span&gt;Secondary&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class="demo-btn outline"&gt;
+    &lt;span&gt;Outline&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+            </div>
+            <div class="code-block">
+              <div class="code-header">
+                <span>CSS</span>
+                <button class="copy-btn" data-copy="button-css">Copy</button>
+              </div>
+              <pre><code>.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}</code></pre>
+            </div>
+          </div>
+
+          <!-- Card Code -->
+          <div class="tab-content" id="card-code">
+            <div class="code-block">
+              <div class="code-header">
+                <span>HTML</span>
+                <button class="copy-btn" data-copy="card-html">Copy</button>
+              </div>
+              <pre><code>&lt;div class="demo-card"&gt;
+    &lt;div class="card-image"&gt;
+        &lt;!-- Your image here --&gt;
+    &lt;/div&gt;
+    &lt;div class="card-content"&gt;
+        &lt;h4&gt;Card Title&lt;/h4&gt;
+        &lt;p&gt;Card description.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="code-block">
+              <div class="code-header">
+                <span>CSS</span>
+                <button class="copy-btn" data-copy="card-css">Copy</button>
+              </div>
+              <pre><code>.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}</code></pre>
+            </div>
+          </div>
+
+          <!-- Form Code -->
+          <div class="tab-content" id="form-code">
+            <div class="code-block">
+              <div class="code-header">
+                <span>HTML</span>
+                <button class="copy-btn" data-copy="form-html">Copy</button>
+              </div>
+              <pre><code>&lt;form class="demo-form"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;input type="text" class="form-input" placeholder=" " required&gt;
+        &lt;label class="form-label"&gt;Full Name&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+        &lt;input type="email" class="form-input" placeholder=" " required&gt;
+        &lt;label class="form-label"&gt;Email Address&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="form-submit"&gt;
+        &lt;span&gt;Submit Form&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+            <div class="code-block">
+              <div class="code-header">
+                <span>CSS</span>
+                <button class="copy-btn" data-copy="form-css">Copy</button>
+              </div>
+              <pre><code>.form-input {
+  width: 100%;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="docs-section">
+      <div class="container">
+        <h2 class="section-title">Documentation</h2>
+        <p class="section-description">
+          Learn how to use and customize these components
+        </p>
+
+        <div class="docs-grid">
+          <div class="doc-card">
+            <div class="doc-icon">
+              <i class="fas fa-mouse-pointer"></i>
+            </div>
+            <h3>Button Component</h3>
+            <p>
+              Interactive buttons with hover effects and multiple variants.
+              Supports primary, secondary, and outline styles.
+            </p>
+            <ul>
+              <li>
+                <strong>Classes:</strong> .demo-btn, .primary, .secondary,
+                .outline
+              </li>
+              <li>
+                <strong>Features:</strong> Hover animations, ripple effect, gradient
+                backgrounds
+              </li>
+              <li>
+                <strong>Usage:</strong> Add the base .demo-btn class and a variant
+                class (e.g., primary).
+              </li>
+            </ul>
+          </div>
+
+          <div class="doc-card">
+            <div class="doc-icon">
+              <i class="fas fa-id-card"></i>
+            </div>
+            <h3>Card Component</h3>
+            <p>
+              Flexible cards with image and text content. Perfect for displaying
+              products, articles, or profiles.
+            </p>
+            <ul>
+              <li>
+                <strong>Structure:</strong> .demo-card > .card-image + .card-content
+              </li>
+              <li>
+                <strong>Features:</strong> Glass morphism effect, hover
+                animations
+              </li>
+              <li>
+                <strong>Responsive:</strong> Adapts to different screen sizes
+              </li>
+            </ul>
+          </div>
+
+          <div class="doc-card">
+            <div class="doc-icon">
+              <i class="fas fa-edit"></i>
+            </div>
+            <h3>Form Component</h3>
+            <p>
+              Styled form inputs with focus states and validation. Includes
+              input fields and submit buttons.
+            </p>
+            <ul>
+              <li>
+                <strong>Elements:</strong> .demo-form, .form-group, .form-input,
+                .form-submit
+              </li>
+              <li>
+                <strong>Features:</strong> Floating labels, focus animations, modern
+                styling
+              </li>
+              <li>
+                <strong>Usage:</strong> Wrap inputs in a .form-group inside a .demo-form.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <p>&copy; 2025 Shibam Banerjee. All rights reserved.</p>
+          </div>
+          <div class="footer-social">
+            <a
+              href="https://github.com/shibam-banerjee-2k25"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/shibam-banerjee-2k25/"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
